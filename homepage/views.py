@@ -9,4 +9,10 @@ from django.template import loader
 
 def index(request):
     template_name = 'homepage/index.html'
-    return render(request, template_name)
+    title = 'Главная страница АСМЕ'
+    promo_product = 'Iron carrot'
+    context = {
+        'title' : title,
+        'promo_product' : promo_product
+    }
+    return render(request, template_name, context)
